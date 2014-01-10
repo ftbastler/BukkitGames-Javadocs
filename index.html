@@ -38,6 +38,20 @@
   </ul>
 </p>
         </section>
+        
+        
+        <section id="more-content">
+          
+          <h3>
+<a name="welcome" class="anchor" href="#more"><span class="octicon octicon-link"></span></a>Want to setup webstats?</h3>
+<p>
+ Here are some SQL statements you can use to get some basic stats from your database. You should have some basic php and sql knowledege.
+ 
+ <h4>Getting the Top 10 Winners</h4>
+ <pre>SELECT bg_players.NAME, COUNT(DEATH_REASON) AS WINS FROM bg_plays JOIN bg_players on bg_plays.REF_PLAYER = bg_players.ID WHERE bg_plays.DEATH_REASON = \"WINNER\" AND bg_players.NAME IS NOT NULL GROUP BY REF_PLAYER ORDER BY WINS DESC LIMIT 10;</pre>
+ 
+</p>
+        </section>
 
         <aside id="sidebar">
           <a href="http://www.spigotmc.org/resources/bukkitgames.279/" class="button">
